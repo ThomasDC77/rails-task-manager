@@ -1,0 +1,13 @@
+<div class="container"></div>
+<h1><%= @task.title %></h1>
+
+<p class="details"><%= @task.details %></p>
+
+<%= form_with model: @task do |f| %>
+  <%= f.label "This task is completed" %>
+  <%= f.check_box :completed %>
+<% end %>
+
+<%= link_to "back to list", tasks_path %>
+
+<%= link_to "update the task", edit_task_path %>
